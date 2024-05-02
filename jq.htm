@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced Mobile Website with jQuery Mobile</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery Mobile -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Set the viewport for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom CSS for styling -->
+    <style>
+        /* Custom header and footer styling */
+        .custom-header,
+        .custom-footer {
+            background-color: #444; /* Dark gray background for a sleek look */
+            text-align: center; /* Center the text */
+            color: white; /* White text for contrast */
+        }
+
+        /* Content padding for spacing */
+        .content-padding {
+            padding: 20px;
+            text-align: center; /* Center the content */
+        }
+
+        /* Styling for the buttons */
+        .ui-btn {
+            border-radius: 20px; /* Softer rounded edges for buttons */
+            background-color: #666; /* Lighter shade of gray */
+            color: white; /* White text on buttons */
+        }
+
+        /* Styling for the listview */
+        .custom-list {
+            border: 1px solid #ccc; /* Subtle border for definition */
+            border-radius: 15px; /* Rounded edges for a smoother look */
+            background-color: #f9f9f9; /* Light background for readability */
+        }
+
+        /* Contact form styling */
+        .ui-field-contain {
+            margin-bottom: 10px; /* Space between form fields */
+        }
+
+        input, textarea {
+            border-radius: 10px; /* Rounded edges for input fields */
+        }
+
+        /* Contact form submit button */
+        #contact-form button {
+            background-color: #007BFF; /* Blue color for action buttons */
+            color: white; /* White text on buttons */
+        }
+    </style>
+    <!-- JavaScript for event handling -->
+    <script>
+        // Event handler for form submission
+        $(document).on("pagecreate", "#contact", function() {
+            $("#contact-form").on("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+                alert("Thank you for your message! We will get back to you soon."); // Confirmation alert
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Home Page -->
+    <div data-role="page" id="home" data-theme="a">
+        <div data-role="header" class="custom-header">
+            <h1>Home</h1> <!-- Page title -->
+        </div>
+        
+        <div data-role="content" class="content-padding">
+            <h2>Welcome to Our Mobile Website</h2> <!-- Welcome message -->
+            <p>This website demonstrates jQuery Mobile features with custom CSS and event handling.</p>
+            <a href="#about" data-role="button" data-transition="slide" data-icon="info">About Us</a>
+            <a href="#contact" data-role="button" data-transition="fade" data-icon="mail">Contact Us</a>
+        </div>
+        
+        <div data-role="footer" class="custom-footer">
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum delectus voluptates accusantium laboriosam labore ex eaque nesciunt mollitia est expedita doloribus rerum, sed debitis maiores maxime error, perferendis libero. Explicabo laudantium aspernatur, iusto nam ex soluta voluptatum nobis quaerat facere doloribus possimus tempora eum culpa unde alias ipsam consequuntur dignissimos saepe facilis, autem assumenda. Et, aut. Eum vero iure atque, laboriosam commodi, aperiam quia aut, delectus nobis odit reiciendis recusandae impedit deserunt voluptates quis sequi? Pariatur, sed veritatis quas iusto quidem minus error quam, mollitia ut cupiditate iure reprehenderit voluptatum laboriosam, eum ea fuga animi quia inventore odit maxime aspernatur omnis non exercitationem impedit! Quam, odit? Dolore dicta quidem aliquam sit magnam eos minima? Ab, distinctio temporibus placeat quam veritatis consequatur, neque vero veniam maiores aliquam voluptatem atque praesentium obcaecati similique laboriosam inventore optio eius dicta aperiam. Nulla molestiae dolores exercitationem, asperiores cum voluptas explicabo a at odio, rem sequi odit qui provident fugit eligendi aliquam aspernatur doloribus deserunt veniam voluptatum suscipit ipsa. Omnis neque, quos corporis incidunt quasi, dolore quibusdam ut consequuntur nesciunt natus quas rerum quod in, debitis earum dolorum recusandae fugit aspernatur. Culpa repellat quas nobis! Rerum aperiam aspernatur sunt, accusantium inventore doloremque iste? Omnis, amet ut.</h4>
+        </div>
+    </div>
+    
+    <!-- About Page -->
+    <div data-role="page" id="about" data-theme="b">
+        <div data-role="header" class="custom-header">
+            <a href="#home" data-role="button" data-icon="arrow-l" id="backButton">Back</a>
+            <h1>About Us</h1>
+        </div>
+        <style>
+            /* Styling for the back button */
+            #backButton {
+                background-color: #4CAF50; /* Default background color */
+                color: white; /* Default text color */
+                font-weight: bold; /* Make the text bold */
+                padding: 10px; /* Padding around the text */
+                border-radius: 5px; /* Slightly rounded corners */
+                transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+            }
+
+            /* Hover effect for the back button */
+            #backButton:hover {
+                background-color: #45a049; /* Change background color on hover */
+                transform: scale(1.1); /* Slightly increase the size on hover */
+                color: #fff; /* Keep text color white on hover */
+            }
+
+            /* Styling for the button icon */
+            #backButton .ui-btn-icon-left {
+                padding-left: 5px; /* Add a bit of padding to the left for the icon */
+            }
+
+            /* Adding focus effect for accessibility */
+            #backButton:focus {
+                outline: none; /* Remove default focus outline */
+                box-shadow: 0 0 10px #45a049; /* Add a glow effect on focus */
+            }
+        </style>
+        </div>
+        
+        <div data-role="content" class="content-padding">
+            <p>This page provides information about our organization.</p>
+            <ul data-role="listview" class="custom-list" data-inset="true">
+                <h1></head><li>Our Mission</li></h1>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ducimus excepturi beatae? Cumque iusto modi illum voluptatibus animi. Commodi explicabo amet minima consectetur quas atque unde incidunt adipisci asperiores accusantium est facere, distinctio, exercitationem voluptate blanditiis dignissimos rem, et fuga quam earum expedita totam provident velit. Repellat distinctio maxime adipisci animi? Incidunt quasi, amet facilis rerum atque totam tempore adipisci aut ad iste enim vitae libero quis itaque consectetur dignissimos possimus deserunt laborum reprehenderit accusantium aspernatur eaque mollitia alias impedit. Hic suscipit laboriosam in molestiae iusto voluptas blanditiis, neque quam illo sed consequatur dignissimos explicabo ipsum odio impedit pariatur. Sint molestias atque amet quia perferendis quos, fuga aperiam, aut distinctio, commodi alias assumenda corporis beatae numquam! Eius autem earum repudiandae accusantium nisi aliquid facilis dolorum quas eveniet officiis! Quasi reiciendis debitis dolorem, optio ea provident error dolores minima molestias! Tenetur recusandae iure repellendus distinctio modi harum dolores laboriosam temporibus dolore tempore. Veritatis assumenda placeat alias qui atque, debitis cupiditate commodi quo est ab unde omnis optio voluptates autem eos, ad asperiores itaque numquam! Soluta ut neque, blanditiis rem culpa sit id voluptatibus mollitia quibusdam deserunt praesentium earum doloremque accusantium assumenda totam vitae fugiat voluptatem aut. Consectetur sed perspiciatis impedit voluptate!
+                </div>
+                <br><br>
+                <h1></head><li>Our Team</li></h1>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ducimus excepturi beatae? Cumque iusto modi illum voluptatibus animi. Commodi explicabo amet minima consectetur quas atque unde incidunt adipisci asperiores accusantium est facere, distinctio, exercitationem voluptate blanditiis dignissimos rem, et fuga quam earum expedita totam provident velit. Repellat distinctio maxime adipisci animi? Incidunt quasi, amet facilis rerum atque totam tempore adipisci aut ad iste enim vitae libero quis itaque consectetur dignissimos possimus deserunt laborum reprehenderit accusantium aspernatur eaque mollitia alias impedit. Hic suscipit laboriosam in molestiae iusto voluptas blanditiis, neque quam illo sed consequatur dignissimos explicabo ipsum odio impedit pariatur. Sint molestias atque amet quia perferendis quos, fuga aperiam, aut distinctio, commodi alias assumenda corporis beatae numquam! Eius autem earum repudiandae accusantium nisi aliquid facilis dolorum quas eveniet officiis! Quasi reiciendis debitis dolorem, optio ea provident error dolores minima molestias! Tenetur recusandae iure repellendus distinctio modi harum dolores laboriosam temporibus dolore tempore. Veritatis assumenda placeat alias qui atque, debitis cupiditate commodi quo est ab unde omnis optio voluptates autem eos, ad asperiores itaque numquam! Soluta ut neque, blanditiis rem culpa sit id voluptatibus mollitia quibusdam deserunt praesentium earum doloremque accusantium assumenda totam vitae fugiat voluptatem aut. Consectetur sed perspiciatis impedit voluptate!
+                </div>
+                <br><br>
+                <h1></head><li>Our Histoory</li></h1>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ducimus excepturi beatae? Cumque iusto modi illum voluptatibus animi. Commodi explicabo amet minima consectetur quas atque unde incidunt adipisci asperiores accusantium est facere, distinctio, exercitationem voluptate blanditiis dignissimos rem, et fuga quam earum expedita totam provident velit. Repellat distinctio maxime adipisci animi? Incidunt quasi, amet facilis rerum atque totam tempore adipisci aut ad iste enim vitae libero quis itaque consectetur dignissimos possimus deserunt laborum reprehenderit accusantium aspernatur eaque mollitia alias impedit. Hic suscipit laboriosam in molestiae iusto voluptas blanditiis, neque quam illo sed consequatur dignissimos explicabo ipsum odio impedit pariatur. Sint molestias atque amet quia perferendis quos, fuga aperiam, aut distinctio, commodi alias assumenda corporis beatae numquam! Eius autem earum repudiandae accusantium nisi aliquid facilis dolorum quas eveniet officiis! Quasi reiciendis debitis dolorem, optio ea provident error dolores minima molestias! Tenetur recusandae iure repellendus distinctio modi harum dolores laboriosam temporibus dolore tempore. Veritatis assumenda placeat alias qui atque, debitis cupiditate commodi quo est ab unde omnis optio voluptates autem eos, ad asperiores itaque numquam! Soluta ut neque, blanditiis rem culpa sit id voluptatibus mollitia quibusdam deserunt praesentium earum doloremque accusantium assumenda totam vitae fugiat voluptatem aut. Consectetur sed perspiciatis impedit voluptate!
+                </div>
+
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Contact Page -->
+    <div data-role="page" id="contact" data-theme="c">
+        <div data-role="header" class="custom-header">
+            <a href="#home" data-role="button" data-icon="arrow-l" id="backButton">Back</a>
+            <h1>Contact Us</h1>
+        </div>
+        <style>
+            /* Styling for the back button */
+            #backButton {
+                background-color: #4CAF50; /* Default background color */
+                color: white; /* Default text color */
+                font-weight: bold; /* Make the text bold */
+                padding: 10px; /* Padding around the text */
+                border-radius: 5px; /* Slightly rounded corners */
+                transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+            }
+
+            /* Hover effect for the back button */
+            #backButton:hover {
+                background-color: #45a049; /* Change background color on hover */
+                transform: scale(1.1); /* Slightly increase the size on hover */
+                color: #fff; /* Keep text color white on hover */
+            }
+
+            /* Styling for the button icon */
+            #backButton .ui-btn-icon-left {
+                padding-left: 5px; /* Add a bit of padding to the left for the icon */
+            }
+
+            /* Adding focus effect for accessibility */
+            #backButton:focus {
+                outline: none; /* Remove default focus outline */
+                box-shadow: 0 0 10px #45a049; /* Add a glow effect on focus */
+            }
+        </style>
+        
+        <div data-role="content" class="content-padding">
+            <form id="contact-form">
+                <div data-role="fieldcontain">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Your name">
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your email">
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" data-role="button" data-icon="check">Submit</button>
+            </form>
+        </div>
+        
+        <div data-role="footer" class="custom-footer">
+            <h4>&copy; Salik Mulla</h4>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- Mobile Pages: The HTML structure defines different pages (<div data-role="page">) for the home, about, and contact sections. Each page is styled and structured to fit within a mobile viewport.
+Forms: The contact page includes a form (<form id="contact-form">) with input fields for name, email, and message. It demonstrates how jQuery Mobile styles form elements for better usability on mobile devices.
+Themes: The code utilizes jQuery Mobile's theming capabilities by specifying data-theme attributes (data-theme="a", data-theme="b", data-theme="c") for different pages to apply consistent color schemes.
+Formatting Lists: The about page includes a list (<ul data-role="listview">) with custom styling (custom-list) for presenting information in a formatted and mobile-friendly way.
+Header and Footer: Each page includes a custom header (<div data-role="header" class="custom-header">) and footer (<div data-role="footer" class="custom-footer">) styled with specific background colors, text alignment, and other CSS properties to maintain consistency and provide navigation options. -->
